@@ -20,5 +20,8 @@
     "bugs": {
         "url": "https://github.com/danilocodes/wpp-bot-example/issues"
     },
-    "homepage": "https://github.com/danilocodes/wpp-bot-example#readme"
+    "homepage": "https://github.com/danilocodes/wpp-bot-example#readme",
+    "dependencies": {
+        "@open-wa/wa-automate": "^4.54.6"
+    }
 }
