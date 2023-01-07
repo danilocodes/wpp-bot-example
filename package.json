@@ -1,0 +1,24 @@
+{
+    "name": "wpp-bot-example",
+    "version": "1.0.0",
+    "description": "A simple whatsapp bot that create stickers",
+    "main": "index.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/danilocodes/wpp-bot-example.git"
+    },
+    "keywords": [
+        "bot",
+        "whatsapp",
+        "automation"
+    ],
+    "author": "Danilo Rocha <danilo.rocha1@hotmail.com>",
+    "license": "See LICENSE file",
+    "bugs": {
+        "url": "https://github.com/danilocodes/wpp-bot-example/issues"
+    },
+    "homepage": "https://github.com/danilocodes/wpp-bot-example#readme"
+}
