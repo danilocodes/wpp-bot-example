@@ -1,23 +1,23 @@
 # WhatsApp Bot demo
 
-Uma demonstração usando a biblioteca wa-automate para criar um bot que transforma imagens em stickers no WhatsApp
+A demo using the wa-automate library to create a bot that turns images into stickers in WhatsApp
 
-## Instalação
-_OBS: Esse projeto assume que você tenha nodejs v16 ou superior instalado e funcionando_
+## Installation
+_OBS: This project assumes that you have nodejs v16 or higher up and running_
 
-Use o seguinte comando para instalar as dependências após fazer o clone e entrar na pasta do projeto
+Use the following command to install the dependencies after cloning and entering the project folder
 
 ```sh
 npm install
 ```
 
-## Execução
-Use o seguinte comando para executar o projeto. Tenha seu celular em mãos para escanear o QRcode
+## Execution
+Use the following command to run the project. Have your cell phone at hand to scan the QRcode
 
 ```sh
 npm start
 ```
 
-Após escanear o QRcode, aguarde alguns segundos até o término da inicialização. <br/>
-Envie o comando !test em um chat de grupo para checar o funcionamento
+After scanning the QRcode, wait a few seconds for the initialization to finish <br/>
+Send the !test command in a group chat to check if it works
 
