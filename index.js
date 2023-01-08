@@ -1,7 +1,7 @@
 const {create} = require('@open-wa/wa-automate');
 
-const config = {
-    headless: true,
+const clientConfig = {
+    headless: false,
     sessionId: 'wpp-bot-example',
     disableSpins: true,
     skipUpdateCheck: true,
@@ -43,19 +43,19 @@ const handler = async (client) => {
     client.onAnyMessage(async (message) => {
         try {
             logMessage(message);
-            const body = message.body.split(' ')[0].toLowerCase();
+            const command = message.body.split(' ')[0].toLowerCase();
             const chatId = message.chat.id;
-            switch (body) {
+            switch (command) {
                 case '!test':
                     await client.sendText(chatId, '👋 Hello World!');
                     break;
                 case '!sticker':
                     const quotedMsg = message.quotedMsg;
                     if (quotedMsg && quotedMsg.type === 'image') {
-                        const buffer = await client.decryptMedia(quotedMsg);
+                        const imgBuffer = await client.decryptMedia(quotedMsg);
                         await client.sendImageAsSticker(
                             chatId,
-                            buffer,
+                            imgBuffer,
                             stickerMetadata
                         );
                     } else {
@@ -74,6 +74,6 @@ const handler = async (client) => {
     });
 };
 
-create(config)
+create(clientConfig)
     .then(handler)
     .catch((err) => console.log(err));
