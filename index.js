@@ -1,5 +1,7 @@
 const {create} = require('@open-wa/wa-automate');
 
+// check wa-automate docs for more info on this object
+// https://openwa.dev/docs/api/interfaces/api_model_config.ConfigObject
 const clientConfig = {
     headless: false,
     sessionId: 'wpp-bot-example',
@@ -14,6 +16,7 @@ const clientConfig = {
     ignoreNuke: true,
 };
 
+// This metadata will be visible when the sticker is clicked in WhatsApp
 const stickerMetadata = {
     author: 'WhatsApp Bot',
     keepScale: true,
