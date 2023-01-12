@@ -23,6 +23,6 @@ describe('ban Command', () => {
         const sendMessage = jest.spyOn(botClient, 'sendMessage');
         const result = await banHandler(botClient as BotClient, populatedMessage as any);
         expect(result).toBe(true);
-        expect(sendMessage).not.toHaveBeenCalled();
+        expect(sendMessage).toHaveBeenCalled();
     });
 });
