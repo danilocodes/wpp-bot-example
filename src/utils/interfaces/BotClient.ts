@@ -3,10 +3,12 @@ import {
     ChatId,
     Client,
     ContactId,
+    DataURL,
     GroupChatId,
     MessageId,
 } from '@open-wa/wa-automate';
 import Command from './Command';
+import { PopulatedMessage } from './PopulatedMessage';
 
 export default interface BotClient {
     // variables
@@ -28,4 +30,7 @@ export default interface BotClient {
     joinGroup: (link: string) => Promise<string | number | boolean | Chat>;
     blockContact: (chatId: ContactId) => Promise<boolean>;
     getGroupAdmins: (chatId: GroupChatId) => Promise<ContactId[]>;
+    getMedia: (message: PopulatedMessage) => Promise<DataURL>;
+    sendImageSticker: (chatId: ChatId, buffer: DataURL, metadata: unknown) => Promise<string | boolean | MessageId>;
+    sendGifSticker: (chatId: ChatId, buffer: DataURL, options: unknown, metadata: unknown) => Promise<string | boolean | MessageId>;
 }
