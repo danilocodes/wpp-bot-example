@@ -9,3 +9,9 @@ export enum CommandRoles {
     ADMIN,
     USER,
 }
+
+export const stickerMetadata = {
+    author: 'ExampleBot',
+    keepScale: true,
+    pack: 'ExampleBot'
+}
